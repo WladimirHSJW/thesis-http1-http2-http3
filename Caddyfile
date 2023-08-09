@@ -1,0 +1,22 @@
+{
+  debug
+  auto_https off
+}
+
+:80 {
+  templates
+
+  file_server browse
+  encode zstd gzip
+}
+
+:443 {
+  templates
+
+  file_server browse
+  encode zstd gzip
+
+  #tls /etc/tls/certs/certificate.pem /etc/tls/certs/private-key.pem
+}
+
+

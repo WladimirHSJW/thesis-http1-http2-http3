@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  caddy:
+    image: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443/tcp"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./websites:/srv
+     # - /etc/letsencrypt/live/katzen-im-web-*.de/fullchain.pem:/etc/tls/certs/certificate.pem
+     # - /etc/letsencrypt/live/katzen-im-web-*.de/privkey.pem:/etc/tls/certs/private-key.pem
