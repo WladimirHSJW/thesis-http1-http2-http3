@@ -16,7 +16,7 @@
   file_server browse
   encode zstd gzip
 
-  #tls /etc/tls/certs/certificate.pem /etc/tls/certs/private-key.pem
+  tls /etc/tls/certs/certificate.pem /etc/tls/certs/private-key.pem
 }
 
 
